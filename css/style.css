@@ -1,0 +1,103 @@
+/* General */
+
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+}
+
+body {
+   /* this and box sozing thing doing all the time */
+   margin: 0;
+   font-family: "Roboto", sans-serif;
+   line-height: 1.5;
+}
+
+img {
+   max-width: 100%;
+   display: block;
+}
+
+h1,
+h2,
+h3,
+p {
+   margin: 0;
+}
+
+section {
+   padding: 7em 0;
+}
+
+/* General containers */
+
+.container {
+   /* makes everything smaller then screen (85% of the screen but less then 1000px) and align at the center */
+   width: 85%;
+   max-width: 1000px;
+   margin: 0 auto;
+}
+
+.split {
+   display: flex;
+   gap: 2em;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+
+.split > * {
+   flex-basis: 30%;
+   min-width: 15em;
+   padding-top: 2em;
+}
+
+.cpacing > * + * {
+   margin-top: var(--spacer, 2rem);
+}
+
+.btn {
+   display: inline-block;
+   text-decoration: none;
+   color: var(--text_clr, #fff);
+   font-weight: 700;
+   text-transform: uppercase;
+   font-size: 1.25rem;
+   padding: 0.5em 1.25em;
+   background: var(--accent_clr, blue);
+   border-radius: 0.25em;
+   transition: transform 250ms ease-in-out, opacity 250ms linear;
+}
+.btn:hover,
+.btn:focus {
+   transform: scale(1.1);
+   opacity: 0.9;
+}
+
+.header_title {
+   font-size: 4rem;
+   line-height: 1;
+   /* he's just flexing with this things - change fs to user screensize */
+   font-size: clamp(3rem, calc(5vw+1rem), 4.5rem);
+   text-transform: uppercase;
+}
+
+.section_title {
+   text-align: center;
+   font-size: 3rem;
+   font-size: clamp(2.5rem, calc(5vw+1rem), 4rem);
+   line-height: 1;
+   color: #17353d;
+   margin-bottom: 3rem;
+}
+
+.hero {
+   color: white;
+   text-align: center;
+   padding: 14em 0;
+   background: url(/img/shoe-3.png), radial-gradient(#444, #111);
+   background-blend-mode: multiply;
+   background-attachment: fixed;
+   background-repeat: no-repeat;
+   /* makes background image be at the center */
+   background-position: center center;
+}
